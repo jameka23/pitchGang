@@ -18,8 +18,7 @@ class RecordViewController: UIViewController , AVAudioRecorderDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("view has loaded")
+        ConfigureUI(recoredState: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,9 +26,7 @@ class RecordViewController: UIViewController , AVAudioRecorderDelegate{
     }
     
     @IBAction func recordSound(_ sender: Any) {
-        print("record button was pressed")
-        recordLabel.text = "Recording in Progress"
-        recordButton.isEnabled = false
+        ConfigureUI(recoredState: true)
         
         // setting path for audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -49,9 +46,7 @@ class RecordViewController: UIViewController , AVAudioRecorderDelegate{
     
     
     @IBAction func stopRecordSound(_ sender: Any) {
-        recordLabel.text = "Tap to Record"
-        recordButton.isEnabled = true
-        stopButton.isEnabled = false
+        ConfigureUI(recoredState: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
@@ -71,11 +66,23 @@ class RecordViewController: UIViewController , AVAudioRecorderDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if(segue.identifier == "stopRecording"){
             let playSoundVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
             playSoundVC.audioRecordURL = recordedAudioURL
+        }
+    }
+    
+    func ConfigureUI(recoredState: Bool){
+        // if record state is true, enable stop button, disable record and change label
+        if(recoredState){
+            recordButton.isEnabled = false;
+            stopButton.isEnabled = true;
+            recordLabel.text = "Recording in Progress"
+        }else{
+            recordButton.isEnabled = true;
+            stopButton.isEnabled = false;
+            recordLabel.text = "Tap to Record";
         }
     }
     

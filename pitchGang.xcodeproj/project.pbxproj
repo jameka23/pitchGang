@@ -14,6 +14,7 @@
 		69A5E45325D83765009360CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A5E45225D83765009360CC /* Assets.xcassets */; };
 		69A5E45625D83765009360CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A5E45425D83765009360CC /* LaunchScreen.storyboard */; };
 		69A5E46125DB2F53009360CC /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A5E46025DB2F53009360CC /* PlaySoundsViewController.swift */; };
+		69A5E46925DB7671009360CC /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A5E46825DB7671009360CC /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		69A5E45525D83765009360CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A5E45725D83765009360CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69A5E46025DB2F53009360CC /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		69A5E46825DB7671009360CC /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				69A5E45225D83765009360CC /* Assets.xcassets */,
 				69A5E45425D83765009360CC /* LaunchScreen.storyboard */,
 				69A5E45725D83765009360CC /* Info.plist */,
+				69A5E46825DB7671009360CC /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = pitchGang;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A5E46925DB7671009360CC /* PlaySoundsViewController+Audio.swift in Sources */,
 				69A5E44E25D83763009360CC /* RecordViewController.swift in Sources */,
 				69A5E44A25D83763009360CC /* AppDelegate.swift in Sources */,
 				69A5E46125DB2F53009360CC /* PlaySoundsViewController.swift in Sources */,

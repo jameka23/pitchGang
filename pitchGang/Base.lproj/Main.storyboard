@@ -81,10 +81,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyl-ak-Dt1" userLabel="Chipmuck Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="774"/>
                                                 <state key="normal" image="HighPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundButton:" destination="lI8-di-3Iq" eventType="touchUpInside" id="gVd-iI-6yr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH7-N0-hpR" userLabel="Vader Button">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="774"/>
                                                 <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundButton:" destination="lI8-di-3Iq" eventType="touchUpInside" id="Z6r-Bw-TIo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -97,6 +103,9 @@
                                     <constraint firstAttribute="width" constant="64" id="k9p-hV-2fW"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="lI8-di-3Iq" eventType="touchUpInside" id="kSv-YJ-9l1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MJK-IN-4Bm"/>
@@ -111,6 +120,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wjh-6Y-V27"/>
+                    <connections>
+                        <outlet property="chipmuckButton" destination="cyl-ak-Dt1" id="grv-QG-Z7Q"/>
+                        <outlet property="stopButton" destination="oAJ-YK-JO2" id="OR4-zM-Mhf"/>
+                        <outlet property="vaderButton" destination="IH7-N0-hpR" id="rZL-ty-z3c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q6-6W-W7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
